@@ -110,12 +110,34 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     cursor: pointer;
 }
+.app-body-container{
+        position: absolute;
+        top: 105px;
+        width: 100vw;
+}
 .app-body{
     display: grid; 
     grid-template-columns: repeat(4, 1fr);
-    position: absolute;
-    top: 105px;
     margin: 0 auto;
-    width: 100vw;
     padding: 0 2rem ;
+}
+@media screen and (max-width: 1250px) {
+    .app-body{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        width: max-content;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .app-body{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+@media screen and (max-width: 650px) {
+    .app-body{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
 }
